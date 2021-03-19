@@ -22,6 +22,16 @@ module.exports = {
              avatar,
              
         })
+
         return response.json({ id })
+    },
+    
+    async findOne(request, response){
+        const { email } = request.body
+        
+        const user = await connection('users').select('*').where('email', email)
+
+        return response.json(user)
     }
+
 }

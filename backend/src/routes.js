@@ -17,6 +17,7 @@ routes.post('/users/findOne', UserController.findOne)
 
 routes.get('/classrooms', ClassroomController.index)
 routes.post('/classrooms', ClassroomController.create)
+routes.get('/classrooms/', ClassroomController.findOneClass)
 
 routes.post('/authenticate', Authenticate.auth)
 

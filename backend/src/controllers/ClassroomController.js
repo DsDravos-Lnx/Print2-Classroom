@@ -23,5 +23,11 @@ module.exports = {
              
         })
         return response.json({ id })
+    },
+
+    async findOneClass(request, response){
+        const classroom = await connection('classrooms').select('*').where('id', request.body.id)
+
+        return response.json(classroom)
     }
 }

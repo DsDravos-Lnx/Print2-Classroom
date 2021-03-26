@@ -19,8 +19,7 @@ module.exports = {
              name,
              email,
              password,
-             avatar,
-             
+             avatar,             
         })
 
         return response.json({ id })

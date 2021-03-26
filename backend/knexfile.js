@@ -1,12 +1,16 @@
 module.exports = {
 
     development: {
-      client: 'sqlite3',
+      client: 'postgresql',
       connection: {
-        filename: './src/database/db.sqlite'
+        host: 'ec2-54-145-102-149.compute-1.amazonaws.com',
+        port: 5432,
+        database: 'd5smgje53v09i',
+        user:     'srhgtzitxvsius',
+        password: '5b42a7baacaf92e14b89047017094b0b8d5636eebce36fd7ef291a3990f6c97b',
+        ssl: { rejectUnauthorized: false }
       },
       migrations: {
-        directory: './src/database/migrations'
       },
       useNullAsDefault: true,
   
@@ -43,5 +47,4 @@ module.exports = {
         tableName: 'knex_migrations'
       }
     }
-  
   }

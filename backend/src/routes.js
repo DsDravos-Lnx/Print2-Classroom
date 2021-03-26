@@ -8,8 +8,6 @@ const Authenticate = require('./controllers/Authentication')
 const TestController = require('./controllers/TestController')
 
 const routes = express.Router()    
-        
-
 
 routes.get('/users', UserController.index)
 routes.post('/users', UserController.create)
@@ -17,12 +15,11 @@ routes.post('/users/findOne', UserController.findOne)
 
 routes.get('/classrooms', ClassroomController.index)
 routes.post('/classrooms', ClassroomController.create)
-routes.get('/classrooms/', ClassroomController.findOneClass)
 
 routes.post('/authenticate', Authenticate.auth)
 
 .use(authMiddleware.autentication)
 
-routes.get('/test', TestController.index)
+// routes.get('/test', TestController.index)
 
 module.exports = routes

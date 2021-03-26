@@ -1,30 +1,28 @@
-import React from 'react'
-import './dashboard.css'
+import React from 'react';
+import './dashboard.css';
 
 function Dashboard() {
   return(
     <div id="body-dash">
-      <div className="container">
-        <h1 className="title"> GOOGLE SALA DE AULA</h1>
+     
+        <h1 className="title-dash"> GOOGLE SALA DE AULA</h1>
           
-        <div className="header">
+          <div className="header">
 
-          <input type="checkbox" id="check-turma" name="mm"/>
-          <label  className="check-turma"> </label>
+          <button className="btn-turma">+</button> 
+          <button className="btn-logout">Logout</button> 
 
-          <input type="checkbox" id="check-logout" name="mm"/>
-          <label className="check-logout"> </label>
+          </div>
 
-        </div>
-
-        <div className="content-wraper">
+          <div className="content-w-dash">
           
-        </div>
+          </div> 
+        
 
         <footer>Integrator Project II Google Classroom - 2021</footer>
-      </div>
+   
     </div>
   )
 }
     
-export default Dashboard
+export default Dashboard;
